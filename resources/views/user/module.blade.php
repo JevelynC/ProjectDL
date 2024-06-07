@@ -20,7 +20,7 @@
 
 @section('body')
     @include('navbar')
-    <section class="min-h-screen min-w-screen">
+    <section class="min-h-screen min-w-screen pb-10">
         <div class="w-full flex items-center flex-col">
             <div class="title-container w-9/12 py-10">
                 <h1
@@ -28,48 +28,28 @@
                     Modul Pembelajaran</h1>
             </div>
             <div class="grid grid-rows-2 grid-cols-2 w-9/12 gap-10">
-                <div class="module-container w-full bg-[var(--primary)] h-[200px] rounded-xl shadow-xl flex items-center">
-                    <div class="pl-7">
-                        <img src="{{ asset('asset/modul1.png') }}" class="w-[120px]">
+                @foreach ($modules as $module)
+                    <div
+                        class="module-container w-full bg-[var(--primary)] h-[250px] flex flex-col justify-center rounded-xl shadow-xl">
+                        <div class="flex items-center">
+                            <div class="pl-7">
+                                <img src="{{ asset($module['image']) }}" class="w-[120px]">
+                            </div>
+                            <div class="h-full flex flex-col justify-center px-7">
+                                <h2 class="text-xl font-bold py-2">{{ $module['title'] }}</h2>
+                                <p class="text-justify max-w-[400px]">{{ $module['description'] }}</p>
+                            </div>
+                        </div>
+                        <div class="w-full flex px-7 py-4">
+                            <a class="w-1/2 mr-3 rounded-lg bg-[var(--neutral)] h-[40px] font-semibold flex justify-center 
+                        items-center"
+                                href="{{ $module['modul'] }}">Modul</a>
+                            <a class="w-1/2 rounded-lg bg-[var(--neutral)] h-[40px] font-semibold flex justify-center 
+                        items-center"
+                                href="{{ $module['assessment'] }}">Latihan Soal</a>
+                        </div>
                     </div>
-                    <div class="h-full flex flex-col justify-center px-7">
-                        <h2 class="text-xl font-bold py-2">Modul Pembelajaran 1</h2>
-                        <p class="text-justify max-w-[400px]">Modul ini ditujukan kepada anak berusia 3-5 tahun. Modul ini
-                            akan membantu anak dalam mengenal warna, angka, dan huruf</p>
-                    </div>
-                </div>
-                <div class="module-container w-full bg-[var(--primary)] h-[200px] rounded-xl shadow-xl flex items-center">
-                    <div class="pl-7">
-                        <img src="{{ asset('asset/modul1.png') }}" class="w-[120px]">
-                    </div>
-                    <div class="h-full flex flex-col justify-center px-7">
-                        <h2 class="text-xl font-bold py-2">Modul Pembelajaran 2</h2>
-                        <p class="text-justify max-w-[400px]">Modul ini ditujukan kepada anak berusia 6-9 tahun. Modul ini
-                            berisi perhitungan sederhana, membaca jam, membedakan posisi, antonim, dan identifikasi masalah
-                        </p>
-                    </div>
-                </div>
-                <div class="module-container w-full bg-[var(--primary)] h-[200px] rounded-xl shadow-xl flex items-center">
-                    <div class="pl-7">
-                        <img src="{{ asset('asset/modul1.png') }}" class="w-[120px]">
-                    </div>
-                    <div class="h-full flex flex-col justify-center px-7">
-                        <h2 class="text-xl font-bold py-2">Modul Pembelajaran 3</h2>
-                        <p class="text-justify max-w-[400px]">Modul ini ditujukan kepada anak berusia 10-12 tahun. Modul ini
-                            akan membantu anak dalam mengenal warna, angka, dan huruf</p>
-                    </div>
-                </div>
-                <div class="module-container w-full bg-[var(--primary)] h-[200px] rounded-xl shadow-xl flex items-center">
-                    <div class="pl-7">
-                        <img src="{{ asset('asset/modul1.png') }}" class="w-[120px]">
-                    </div>
-                    <div class="h-full flex flex-col justify-center px-7">
-                        <h2 class="text-xl font-bold py-2">Modul Pembelajaran 4</h2>
-                        <p class="text-justify max-w-[400px]">Modul ini ditujukan kepada anak berusia diatas 12 tahun. Modul
-                            ini
-                            akan membantu anak dalam mengenal warna, angka, dan huruf</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

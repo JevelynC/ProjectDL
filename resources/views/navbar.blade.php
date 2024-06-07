@@ -17,8 +17,9 @@
             id="navbarSupportedContent3" data-twe-collapse-item>
             <div class="list-style-none me-auto flex flex-col ps-0 lg:mt-1 lg:flex-row" data-twe-navbar-nav-ref>
                 <div class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2" data-twe-nav-item-ref>
-                    <a class="text-[var(--contrast)] font-semibold lg:px-2 text-xl" aria-current="page" href="#"
-                        data-twe-nav-link-ref><i class="fa-solid fa-house mr-2 text-[var(--contrast)]"></i>Home
+                    <a class="text-[var(--contrast)] font-semibold lg:px-2 text-xl" aria-current="page"
+                        href="{{ route('exercise1') }}" data-twe-nav-link-ref><i
+                            class="fa-solid fa-house mr-2 text-[var(--contrast)]"></i>Home
                     </a>
                 </div>
                 <div class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2" data-twe-nav-item-ref>
