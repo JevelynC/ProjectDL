@@ -8,5 +8,7 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 
 class Exercise3 extends Model
 {
-    use HasFactory, HasUuids;
+    use HasFactory;
+    protected $table = 'exercise3';
+    public $timestamps = false;
 }

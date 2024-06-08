@@ -76,12 +76,6 @@
                     <textarea name="jawaban4" cols="30" rows="5" class="w-full my-3" maxlength="2000"></textarea>
                 </div>
             </div>
-            <div class="question w-full flex bg-[var(--primary)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5">
-                <div>
-                    <p>Hasil penjumlahan dua bilangan positif adalah 15 dan selisihnya adalah 3. Apa bilangan tersebut?</p>
-                    <textarea name="jawaban5" cols="30" rows="5" class="w-full my-3" maxlength="1000"></textarea>
-                </div>
-            </div>
             <button class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold" id="submit">Submit</button>
         </div>
     </section>

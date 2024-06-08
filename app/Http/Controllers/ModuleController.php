@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Exercise1;
 use Illuminate\Http\Request;
 
 class ModuleController extends Controller
@@ -174,22 +175,22 @@ class ModuleController extends Controller
                 'option4' => 'Ceroboh',
             ], [
                 'question' => 'Soal itu harus dikerjakan secara <u>teliti</u>.',
-                'option1' => 'Giat',
+                'option1' => 'Ceroboh',
                 'option2' => 'Malas',
-                'option3' => 'Tekun',
-                'option4' => 'Ceroboh',
+                'option3' => 'Bodoh',
+                'option4' => 'Rajin',
             ], [
                 'question' => 'Semalam mati listrik, rumahku jadi <u>gelap</u> gulita.',
-                'option1' => 'Giat',
-                'option2' => 'Malas',
-                'option3' => 'Tekun',
-                'option4' => 'Ceroboh',
+                'option1' => 'Malam',
+                'option2' => 'Suram',
+                'option3' => 'Terang',
+                'option4' => 'Susah',
             ], [
                 'question' => 'Rena hanya memiliki <u>sedikit</u> permen.',
-                'option1' => 'Giat',
-                'option2' => 'Malas',
-                'option3' => 'Tekun',
-                'option4' => 'Ceroboh',
+                'option1' => 'Kecil',
+                'option2' => 'Kurang',
+                'option3' => 'Banyak',
+                'option4' => 'Minim',
             ], [
                 'question' => 'Rumah Rina <u>jauh</u> dari rumah Desi.',
                 'option1' => 'Asing',
@@ -272,22 +273,17 @@ class ModuleController extends Controller
                 'option1' => 'Sedotan',
                 'option2' => 'Jeruk',
                 'option3' => 'Jus jeruk',
-            ], [
-                'question' => 'Monica selalu menggunakan kaus pelanginya untuk melakukan seluruh kegiatan mulai dari memetik buah beri, bermain lumpur, membersihkan tangan sebelum kana, hingga membersihkan mulutnya setelah makan. Karena kaus Monica sangat kotor dan bau, ibu meminta agar kaus Monica dicuci terlebih dahulu, namun, Monica menolaknya. Ibu memaksa Monica untuk membuka kausnya tetapi Monica tidak mau melepaskan kaus tersebut hingga sehingga mereka berdua saling menarik kaus pelangi Monica. setelah lama ditarik, akhirnya Monica mau mencuci kausnya. Setelah dicuci, Mo ingin memakai kaus pelanginya. Tapi ternyata kaus tersebut melar karena ditarik-tarik.',
-                'option1' => '',
-                'option2' => 'Jeruk',
-                'option3' => 'Jus jeruk',
             ]
         ];
 
         $tnfs = [
             [
                 'question' => 'Menyontek',
-            ],  [
+            ], [
                 'question' => 'Membantu seorang bapak yang terlihat kesusahan',
-            ],  [
+            ], [
                 'question' => 'Mengambil sampah yang berserakan',
-            ],  [
+            ], [
                 'question' => 'Mengabaikan teman yang meminta tolong karena sikapnya menyebalkan',
             ]
         ];
@@ -299,6 +295,44 @@ class ModuleController extends Controller
 
     public function exercise4()
     {
-        return view('user.exercise4', []);
+        return view('user.exercise4');
+    }
+
+    public function check1(Request $request)
+    {
+
+        $status = [];
+        $true = 0;
+        $false = 0;
+        for ($i = 0; $i < 16; $i++) {
+            $currentAnswer = $request->input('answers' . $i);
+            if ($currentAnswer == Exercise1::where('id', $i + 1)->first()->answer) {
+                $status[$i] = 'true';
+                $true++;
+            } else {
+                $status[$i] = 'false';
+                $false++;
+            }
+        }
+
+        return redirect()->route('exercise1')->with([
+            'grade' => $true * 6.25,
+            'mulchoice1' => $status[0],
+            'mulchoice2' => $status[1],
+            'mulchoice3' => $status[2],
+            'mulchoice4' => $status[3],
+            'mulchoice5' => $status[4],
+            'mulchoice6' => $status[5],
+            'mulchoice7' => $status[6],
+            'mulchoice8' => $status[7],
+            'mulchoice9' => $status[8],
+            'mulchoice10' => $status[9],
+            'letters11' => $status[10],
+            'letters12' => $status[11],
+            'letters13' => $status[12],
+            'letters14' => $status[13],
+            'letters15' => $status[14],
+            'letters16' => $status[15],
+        ]);
     }
 }

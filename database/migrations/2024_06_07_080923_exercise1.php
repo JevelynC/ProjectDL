@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('exercise1', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('answer');
-            $table->string('answer_desc');
+            $table->string('answer_desc')->nullable();
         });
     }
 

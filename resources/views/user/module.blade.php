@@ -8,18 +8,27 @@
         }
 
         body {
-            background: var(--secondary);
+            /* background: var(--secondary); */
             min-height: 100vh;
             min-width: 100vw;
             padding: 0;
             margin: 0;
             overflow-x: hidden;
+            background-color: hsla(0, 45%, 87%, 1);
+            background-image:
+                radial-gradient(at 0% 63%, hsla(177, 96%, 78%, 0.74) 0px, transparent 50%),
+                radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 0.39) 0px, transparent 50%),
+                radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.64) 0px, transparent 50%),
+                radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+                radial-gradient(at 16% 83%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+                radial-gradient(at 75% 97%, hsla(240, 100%, 70%, 0.74) 0px, transparent 50%),
+                radial-gradient(at 4% 21%, hsla(335, 100%, 76%, 0.77) 0px, transparent 50%);
+            background-size: cover;
         }
     </style>
 @endsection
 
 @section('body')
-    @include('navbar')
     <section class="min-h-screen min-w-screen pb-10">
         <div class="w-full flex items-center flex-col">
             <div class="title-container w-9/12 py-10">
