@@ -12,26 +12,26 @@ class ModuleController extends Controller
             [
                 'title' => 'Modul Pembelajaran 1',
                 'description' => 'Modul ini ditujukan kepada anak berusia 3-5 tahun. Modul ini akan membantu anak dalam mengenal warna, angka, dan huruf',
-                'modul' => '/exercise1',
-                'assessment' => 'assessment1',
+                'assessment' => '/exercise1',
+                'module' => '/module1',
                 'image' => 'asset/modul1.png'
             ], [
                 'title' => 'Modul Pembelajaran 2',
                 'description' => 'Modul ini ditujukan kepada anak berusia 6-9 tahun. Modul ini akan melatih perhitungan sederhana, membaca jam, membedakan posisi, antonim, dan identifikasi masalah',
-                'modul' => '/exercise2',
-                'assessment' => 'assessment2',
+                'assessment' => '/exercise2',
+                'module' => '/module2',
                 'image' => 'asset/modul1.png'
             ], [
                 'title' => 'Modul Pembelajaran 3',
                 'description' => 'Modul ini ditujukan kepada anak berusia 10-12 tahun. Modul ini akan melatih pengetahuan umum, menyelesaikan masalah, dan menentukan kebenaran',
-                'modul' => '/exercise3',
-                'assessment' => 'assessment3',
+                'assessment' => '/exercise3',
+                'module' => '/module3',
                 'image' => 'asset/modul1.png'
             ], [
                 'title' => 'Modul Pembelajaran 4',
                 'description' => 'Modul ini ditujukan kepada anak berusia diatas 12 tahun. Modul ini akan melatih pengambilan keputusan, menyelesaikan masalah, dan pendidikan moral',
-                'modul' => '/exercise4',
-                'assessment' => 'assessment4',
+                'assessment' => '/exercise4',
+                'module' => '/module4',
                 'image' => 'asset/modul1.png'
             ]
         ];

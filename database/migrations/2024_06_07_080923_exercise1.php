@@ -12,8 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('exercise1', function (Blueprint $table) {
-            $table->uuid('id');
+            $table->uuid('id')->primary();
             $table->string('answer');
+            $table->string('answer_desc');
         });
     }
 
@@ -22,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('exercise1');
     }
 };

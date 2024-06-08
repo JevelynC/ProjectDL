@@ -13,7 +13,9 @@ class Exercise1Seeder extends Seeder
     public function run(): void
     {
         $answers = [
-            []
+            [
+                'answer' => 
+            ]
         ];
     }
 }

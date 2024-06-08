@@ -43,7 +43,7 @@
                         <div class="w-full flex px-7 py-4">
                             <a class="w-1/2 mr-3 rounded-lg bg-[var(--neutral)] h-[40px] font-semibold flex justify-center 
                         items-center"
-                                href="{{ $module['modul'] }}">Modul</a>
+                                href="{{ $module['module'] }}">Modul</a>
                             <a class="w-1/2 rounded-lg bg-[var(--neutral)] h-[40px] font-semibold flex justify-center 
                         items-center"
                                 href="{{ $module['assessment'] }}">Latihan Soal</a>
