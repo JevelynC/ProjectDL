@@ -61,7 +61,7 @@
                                 Hasil:
                             </div>
                             <div class="flex items-end px-5">
-                                <input type="number" name="{{ 'additionC' . $index }}"
+                                <input type="number" id="{{ 'hasil' . $index }}" name="{{ 'additionC' . $index }}"
                                     oninput="this.value = this.value.slice(0, 2)"
                                     class="w-[50px] text-xl text-center !bg-transparent border-2 border-black my-3 font-semibold"
                                     required>
@@ -78,24 +78,24 @@
             <div class="question w-full bg-[var(--primary)] py-3 my-7 rounded-lg overflow-hidden pl-10">
 
                 <div class="text-xl font-semibold py-1">
-                    <input type="number" name="{{ 'additionC' . $index }}" oninput="this.value = this.value.slice(0, 2)"
+                    <input type="number" id="tambah0" name="{{ 'additionC' . $index }}" oninput="this.value = this.value.slice(0, 2)"
                         class="w-[40px] text-xl text-center !bg-transparent border-2 border-black my-3 font-semibold"
                         required> + 1 + 3 = 5
                 </div>
                 <div class="text-xl font-semibold py-1">
-                    1 + <input type="number" name="{{ 'additionC' . $index }}"
+                    1 + <input type="number" id="tambah1" name="{{ 'additionC' . $index }}"
                         oninput="this.value = this.value.slice(0, 2)"
                         class="w-[40px] text-xl text-center !bg-transparent border-2 border-black my-3 font-semibold"
                         required>+ 3 = 6
                 </div>
                 <div class="text-xl font-semibold py-1">
-                    1 + 2 + <input type="number" name="{{ 'additionC' . $index }}"
+                    1 + 2 + <input type="number" id="tambah2" name="{{ 'additionC' . $index }}"
                         oninput="this.value = this.value.slice(0, 2)"
                         class="w-[40px] text-xl text-center !bg-transparent border-2 border-black my-3 font-semibold"
                         required> = 7
                 </div>
                 <div class="text-xl font-semibold py-1">
-                    3 + 2 + 3 = <input type="number" name="{{ 'additionC' . $index }}"
+                    3 + 2 + 3 = <input type="number" id="tambah3" name="{{ 'additionC' . $index }}"
                         oninput="this.value = this.value.slice(0, 2)"
                         class="w-[40px] text-xl text-center !bg-transparent border-2 border-black my-3 font-semibold"
                         required>
@@ -111,7 +111,7 @@
                         <div class="mb-3 block min-h-[1.5rem] ps-[1.5rem]">
                             <input
                                 class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-[var(--contrast)] before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right"
-                                type="radio" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionA' . $index }}" />
+                                type="radio" value="{{ $multipleChoice1['option1'] }}" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionA' . $index }}" />
                             <label class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
                                 for="{{ 'optionA' . $index }}">
                                 {{ $multipleChoice1['option1'] }}
@@ -120,7 +120,7 @@
                         <div class="mb-3 block min-h-[1.5rem] ps-[1.5rem]">
                             <input
                                 class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-[var(--contrast)] before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right"
-                                type="radio" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionB' . $index }}" />
+                                type="radio" value="{{ $multipleChoice1['option2'] }}" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionB' . $index }}" />
                             <label class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
                                 for="{{ 'optionB' . $index }}">
                                 {{ $multipleChoice1['option2'] }}
@@ -129,7 +129,7 @@
                         <div class="mb-3 block min-h-[1.5rem] ps-[1.5rem]">
                             <input
                                 class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-[var(--contrast)] before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right"
-                                type="radio" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionC' . $index }}" />
+                                type="radio" value="{{ $multipleChoice1['option3'] }}" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionC' . $index }}" />
                             <label class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
                                 for="{{ 'optionC' . $index }}">
                                 {{ $multipleChoice1['option3'] }}
@@ -138,7 +138,7 @@
                         <div class="mb-3 block min-h-[1.5rem] ps-[1.5rem]">
                             <input
                                 class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-[var(--contrast)] before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right"
-                                type="radio" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionD' . $index }}" />
+                                type="radio" value="{{ $multipleChoice1['option4'] }}" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionD' . $index }}" />
                             <label class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
                                 for="{{ 'optionD' . $index }}">
                                 {{ $multipleChoice1['option4'] }}
@@ -160,7 +160,7 @@
                         <div class="mb-3 block min-h-[1.5rem] ps-[1.5rem]">
                             <input
                                 class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-[var(--contrast)] before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right"
-                                type="radio" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionA' . $index }}" />
+                                type="radio" value="{{ $multipleChoice2['option1'] }}" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionA' . $index }}" />
                             <label class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
                                 for="{{ 'optionA' . $index }}">
                                 {{ $multipleChoice2['option1'] }}
@@ -169,7 +169,7 @@
                         <div class="mb-3 block min-h-[1.5rem] ps-[1.5rem]">
                             <input
                                 class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-[var(--contrast)] before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right"
-                                type="radio" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionB' . $index }}" />
+                                type="radio" value="{{ $multipleChoice2['option2'] }}" name="{{ 'flexRadioDefault' . $index }}" id="{{ 'optionB' . $index }}" />
                             <label class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
                                 for="{{ 'optionB' . $index }}">
                                 {{ $multipleChoice2['option2'] }}
@@ -178,7 +178,7 @@
                         <div class="mb-3 block min-h-[1.5rem] ps-[1.5rem]">
                             <input
                                 class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-[var(--contrast)] before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right"
-                                type="radio" name="{{ 'flexRadioDefault' . $index }}"
+                                type="radio" value="{{ $multipleChoice2['option3'] }}" name="{{ 'flexRadioDefault' . $index }}"
                                 id="{{ 'optionC' . $index }}" />
                             <label class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
                                 for="{{ 'optionC' . $index }}">
@@ -191,7 +191,11 @@
                     $index++;
                 @endphp
             @endforeach
-            <button class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold">Submit</button>
+            <button class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold" id="submit">Submit</button>
         </div>
     </section>
+@endsection
+
+@section('script')
+    <script src="{{ asset('js/exercise2.js') }}"></script>
 @endsection

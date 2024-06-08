@@ -37,7 +37,7 @@
                         menolak
                         ajakan teman-temanmu karena ujian minggu depan sangat susah. Kira-kira pilihan mana yang akan kamu
                         ambil? Belajar atau bermain?</p>
-                    <textarea name="" cols="30" rows="5" class="w-full my-3"></textarea>
+                    <textarea name="jawaban0" cols="30" rows="5" class="w-full my-3"></textarea>
                 </div>
             </div>
             <div class="question w-full flex bg-[var(--primary)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5">
@@ -45,13 +45,13 @@
                     <p>Dalam sebuah kelas terdapat 24 siswa dengan perbandingan jumlah siswa
                         laki-laki dan perempuan adalah 3:5. Berapa jumlah siswa perempuan dan laki-laki dalam kelas
                         tersebut?</p>
-                    <textarea name="" cols="30" rows="5" class="w-full my-3"></textarea>
+                    <textarea name="jawaban1" cols="30" rows="5" class="w-full my-3"></textarea>
                 </div>
             </div>
             <div class="question w-full flex bg-[var(--primary)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5">
                 <div>
                     <p>Hasil penjumlahan dua bilangan positif adalah 15 dan selisihnya adalah 3. Apa bilangan tersebut?</p>
-                    <textarea name="" cols="30" rows="5" class="w-full my-3"></textarea>
+                    <textarea name="jawaban2" cols="30" rows="5" class="w-full my-3"></textarea>
                 </div>
             </div>
             <div class="question w-full flex bg-[var(--primary)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5">
@@ -62,7 +62,7 @@
                         <li class="ml-5">Apa yang akan membuatmu merasa lebih baik?</li>
                         <li class="ml-5">Apa yang bisa kamu katakan atau lakukan untuk Budi?</li>
                     </ol>
-                    <textarea name="" cols="30" rows="5" class="w-full my-3" maxlength="2000"></textarea>
+                    <textarea name="jawaban3" cols="30" rows="5" class="w-full my-3" maxlength="2000"></textarea>
                 </div>
             </div>
             <div class="question w-full flex bg-[var(--primary)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5">
@@ -73,16 +73,20 @@
                         <li class="ml-5">Apa yang akan membuatmu merasa lebih baik?</li>
                         <li class="ml-5">Apa yang bisa kamu katakan atau lakukan untuk Siti?</li>
                     </ol>
-                    <textarea name="" cols="30" rows="5" class="w-full my-3" maxlength="2000"></textarea>
+                    <textarea name="jawaban4" cols="30" rows="5" class="w-full my-3" maxlength="2000"></textarea>
                 </div>
             </div>
             <div class="question w-full flex bg-[var(--primary)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5">
                 <div>
                     <p>Hasil penjumlahan dua bilangan positif adalah 15 dan selisihnya adalah 3. Apa bilangan tersebut?</p>
-                    <textarea name="" cols="30" rows="5" class="w-full my-3" maxlength="1000"></textarea>
+                    <textarea name="jawaban5" cols="30" rows="5" class="w-full my-3" maxlength="1000"></textarea>
                 </div>
             </div>
-            <button class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold">Submit</button>
+            <button class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold" id="submit">Submit</button>
         </div>
     </section>
+@endsection
+
+@section('script')
+    <script src="{{ asset('js/exercise4.js') }}"></script>
 @endsection
