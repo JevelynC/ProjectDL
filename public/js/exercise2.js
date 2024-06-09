@@ -22,15 +22,15 @@ $(document).ready(function () {
             $('#hasil' + i).val(localStorage.getItem('ex2hasil' + i));
             $('#tambah' + i).val(localStorage.getItem('ex2tambah' + i));
         } else {
-            $('input[name=flexRadioDefault' + i + ']').on('change', function () {
-                localStorage.setItem('ex2pilgan' + i, $('input[name=flexRadioDefault' + i + ']:checked').val());
+            $('input[name=answers' + i + ']').on('change', function () {
+                localStorage.setItem('ex2pilgan' + i, $('input[name=answers' + i + ']:checked').val());
             });
 
-            $('input[name=flexRadioDefault' + i + '][value="' + localStorage.getItem('ex2pilgan' + i) + '"]').prop('checked', true);
+            $('input[name=answers' + i + '][value="' + localStorage.getItem('ex2pilgan' + i) + '"]').prop('checked', true);
         }
     }
 
-    $('#submit').on('click', function () {
+    $('#closeReview').on('click', function () {
         localStorage.clear();
     })
 });

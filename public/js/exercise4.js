@@ -6,7 +6,7 @@ $(document).ready(function() {
         $('textarea[name=jawaban' + i + ']').val(localStorage.getItem('ex4jawaban' + i));
     }
 
-    $('#submit').on('click', function () {
+    $('#closeReview').on('click', function () {
         localStorage.clear();
     });
 });
