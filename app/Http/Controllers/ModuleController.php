@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exercise1;
+use App\Models\Exercise2;
+use App\Models\Exercise3;
+use App\Models\Exercise4;
 use Illuminate\Http\Request;
 
 class ModuleController extends Controller
@@ -256,8 +259,8 @@ class ModuleController extends Controller
             ], [
                 'question' => 'Perahu dapat berlayar karena ada',
                 'option1' => 'Angin',
-                'option2' => 'Udara',
-                'option3' => 'Air',
+                'option2' => 'Api',
+                'option3' => 'Tanah',
             ], [
                 'question' => 'Kita dapat menabung uang di … setiap hari',
                 'option1' => 'Celengan',
@@ -278,7 +281,7 @@ class ModuleController extends Controller
 
         $tnfs = [
             [
-                'question' => 'Menyontek',
+                'question' => 'Menyontek pekerjaan orang lain',
             ], [
                 'question' => 'Membantu seorang bapak yang terlihat kesusahan',
             ], [
@@ -303,7 +306,6 @@ class ModuleController extends Controller
 
         $status = [];
         $true = 0;
-        $false = 0;
         for ($i = 0; $i < 16; $i++) {
             $currentAnswer = $request->input('answers' . $i);
             if ($currentAnswer == Exercise1::where('id', $i + 1)->first()->answer) {
@@ -311,12 +313,11 @@ class ModuleController extends Controller
                 $true++;
             } else {
                 $status[$i] = 'false';
-                $false++;
             }
         }
 
         return redirect()->route('exercise1')->with([
-            'grade' => $true * 6.25,
+            'grade' => round($true * 6.25),
             'mulchoice1' => $status[0],
             'mulchoice2' => $status[1],
             'mulchoice3' => $status[2],
@@ -333,6 +334,136 @@ class ModuleController extends Controller
             'letters14' => $status[13],
             'letters15' => $status[14],
             'letters16' => $status[15],
+        ]);
+    }
+
+    public function check2(Request $request)
+    {
+
+        $status1 = [[], [], [], []];
+        $true1 = 0;
+        for ($i = 0; $i < 4; $i++) {
+            $answer1 = $request->input('additionA' . $i);
+            $answer2 = $request->input('additionB' . $i);
+            $answer3 = $request->input('additionC' . $i);
+            if ($answer1 == Exercise2::where('id', $i + 1)->first()->answer) {
+                $true1++;
+                $status1[$i][0] = 'true';
+            } else {
+                $status1[$i][0] = 'false';
+            }
+            if ($answer2 == Exercise2::where('id', $i + 1)->first()->answer2) {
+                $true1++;
+                $status1[$i][1] = 'true';
+            } else {
+                $status1[$i][1] = 'false';
+            }
+            if ($answer3 == Exercise2::where('id', $i + 1)->first()->answer3) {
+                $true1++;
+                $status1[$i][2] = 'true';
+            } else {
+                $status1[$i][2] = 'false';
+            }
+        }
+        $status2 = [];
+        $true2 = 0;
+        for ($i = 0; $i < 14; $i++) {
+            $answer = $request->input('answers' . $i);
+            if ($answer == Exercise2::where('id', $i + 5)->first()->answer) {
+                $true2++;
+                $status2[$i] = 'true';
+            } else {
+                $status2[$i] = 'false';
+            }
+        }
+
+        $grading = 0;
+        $totalTrue = $true1 + $true2;
+        $grading = round($totalTrue * 3.846153846153846);
+
+
+        return redirect()->route('exercise2')->with([
+            'grade' =>  $grading,
+            'additionA1' => $status1[0][0],
+            'additionB1' => $status1[0][1],
+            'additionC1' => $status1[0][2],
+            'additionA2' => $status1[1][0],
+            'additionB2' => $status1[1][1],
+            'additionC2' => $status1[1][2],
+            'additionA3' => $status1[2][0],
+            'additionB3' => $status1[2][1],
+            'additionC3' => $status1[2][2],
+            'additionA4' => $status1[3][0],
+            'additionB4' => $status1[3][1],
+            'additionC4' => $status1[3][2],
+            'answers1' => $status2[0],
+            'answers2' => $status2[1],
+            'answers3' => $status2[2],
+            'answers4' => $status2[3],
+            'answers5' => $status2[4],
+            'answers6' => $status2[5],
+            'answers7' => $status2[6],
+            'answers8' => $status2[7],
+            'answers9' => $status2[8],
+            'answers10' => $status2[9],
+            'answers11' => $status2[10],
+            'answers12' => $status2[11],
+            'answers13' => $status2[12],
+            'answers14' => $status2[13],
+        ]);
+    }
+    public function check3(Request $request)
+    {
+
+        $status = [];
+        $true = 0;
+        for ($i = 0; $i < 11; $i++) {
+            if ($i != 6) {
+                $currentAnswer = $request->input('answers' . $i);
+                if ($currentAnswer == Exercise3::where('id', $i + 1)->first()->answer) {
+                    $status[$i] = 'true';
+                    $true++;
+                } else {
+                    $status[$i] = 'false';
+                }
+            }
+        }
+        $answer_desc7 = Exercise3::where('id', '7')->first()->answer_desc;
+        return redirect()->route('exercise3')->with([
+            'grade' => round($true * 10),
+            'answers1' => $status[0],
+            'answers2' => $status[1],
+            'answers3' => $status[2],
+            'answers4' => $status[3],
+            'answers5' => $status[4],
+            'answers6' => $status[5],
+            'answers7' => $answer_desc7,
+            'answers8' => $status[7],
+            'answers9' => $status[8],
+            'answers10' => $status[9],
+            'answers11' => $status[10]
+        ]);
+    }
+    public function check4(Request $request)
+    {
+
+
+        $answer_desc1 = Exercise4::where('id', '1')->first()->answer_desc;
+        $answer_desc2 = Exercise4::where('id', '2')->first()->answer_desc;
+        $answer_desc3 = '<p>Kita dapat menyelesaikan soal ini dengan menggunakan sistem persamaan. Kita bisa menyatakan kedua bilangan sebagai x dan y. Dari informasi yang diberikan, kita dapat menyusun persamaan sebagai berikut:</p>
+        <p>x + y = 15 (persamaan 1) </p> <p>x - y = 3 (persamaan 2)</p> <p>Dari persamaan 1, kita dapat menyatakan y sebagai y = 15 - x. Kita bisa substitusi y ke dalam persamaan 2 sehingga didapatkan:
+x - (15 - x) = 3</p><p>Kita buka tanda kurungnya dengan mengalikan tanda - untuk tiap variabel di dalam kurung</p> <p>x - 15 + x = 3 </p>
+<p>2x - 15 = 3</p><p> 2x = 18</p><p>x = 9</p><p>Kita dapat substitusi x ke dalam salah satu persamaan untuk mencari nilai y. Kita dapat menggunakan persamaan 1 sehingga didapatkan:</p>
+<p>9 + y = 15 </p><p>y = 6</p><p>Jadi, kedua bilangan adalah 9 dan 6.</p>';
+        $answer_desc4 = Exercise4::where('id', '4')->first();
+        $answer_desc5 = Exercise4::where('id', '5')->first();
+        return redirect()->route('exercise4')->with([
+            'grade' => 100,
+            'answers1' => $answer_desc1,
+            'answers2' => $answer_desc2,
+            'answers3' => $answer_desc3,
+            'answers4' => $answer_desc4,
+            'answers5' => $answer_desc5,
         ]);
     }
 }

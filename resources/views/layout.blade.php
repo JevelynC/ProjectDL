@@ -23,14 +23,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
         ::selection {
-            background: var(--dark-color);
-            color: white;
+            background: var(--secondary);
+            /* color: white; */
         }
 
 
         ::-moz-selection {
-            background: var(--dark-color);
-            color: white;
+            background: var(--secondary);
+            /* color: white; */
         }
 
         :root {

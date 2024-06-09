@@ -63,6 +63,5 @@ class Exercise2Seeder extends Seeder
         foreach ($answers as $answer) {
             Exercise2::create($answer);
         }
-
     }
 }

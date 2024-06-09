@@ -11,3 +11,6 @@ Route::get('/exercise2', [ModuleController::class, 'exercise2'])->name('exercise
 Route::get('/exercise3', [ModuleController::class, 'exercise3'])->name('exercise3');
 Route::get('/exercise4', [ModuleController::class, 'exercise4'])->name('exercise4');
 Route::post('/check1', [ModuleController::class, 'check1'])->name('check1');
+Route::post('/check2', [ModuleController::class, 'check2'])->name('check2');
+Route::post('/check3', [ModuleController::class, 'check3'])->name('check3');
+Route::post('/check4', [ModuleController::class, 'check4'])->name('check4');
