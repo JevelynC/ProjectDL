@@ -38,6 +38,7 @@
             --secondary: #BAE5F4;
             --neutral: #FCCDCD;
             --contrast: rgba(0, 0, 90);
+            --white: #fefefe;
         }
     </style>
 

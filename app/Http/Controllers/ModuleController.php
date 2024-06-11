@@ -466,4 +466,24 @@ x - (15 - x) = 3</p><p>Kita buka tanda kurungnya dengan mengalikan tanda - untuk
             'answers5' => $answer_desc5,
         ]);
     }
+
+    public function module1()
+    {
+        return view('user.module1');
+    }
+
+    public function module2()
+    {
+        return view('user.module2');
+    }
+
+    public function module3()
+    {
+        return view('user.module3');
+    }
+
+    public function module4()
+    {
+        return view('user.module4');
+    }
 }
