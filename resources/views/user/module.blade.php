@@ -36,13 +36,13 @@
                     class="text-3xl sm:text-5xl font-extrabold drop-shadow-2xl text-[var(--contrast)] uppercase border-b-4 border-[var(--contrast)]">
                     Modul Pembelajaran</h1>
             </div>
-            <div class="sm:grid grid-rows-2 grid-cols-2 w-9/12 gap-10">
+            <div class="xl:grid grid-rows-2 grid-cols-2 w-9/12 gap-10">
                 @foreach ($modules as $module)
                     <div
-                        class="module-container w-full bg-[var(--primary)] flex flex-col justify-center rounded-xl shadow-xl mt-4 sm:mt-0 py-4 sm:py-1">
+                        class="module-container w-full bg-[var(--primary)] flex flex-col justify-center rounded-xl shadow-xl mt-4 xl:mt-0 py-4 sm:py-3">
                         <div class="flex items-center flex-col sm:flex-row">
-                            <div class="sm:pl-7">
-                                <img src="{{ asset($module['image']) }}" class="w-[120px]">
+                            <div class="xl:pl-7">
+                                <img src="{{ asset($module['image']) }}" class="w-[150px]">
                             </div>
                             <div class="h-full flex flex-col justify-center px-7">
                                 <h2 class="text-xl font-bold py-2">{{ $module['title'] }}</h2>
