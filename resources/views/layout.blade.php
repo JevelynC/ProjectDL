@@ -19,7 +19,7 @@
 
     {{-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> --}}
     <script src="https://cdn.tailwindcss.com/3.3.0"></script>
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
@@ -37,12 +37,30 @@
             /* color: white; */
         }
 
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--neutral);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
         :root {
             --primary: #E2D2FE;
             --secondary: #BAE5F4;
             --neutral: #FCCDCD;
             --contrast: rgba(0, 0, 90);
             --white: #fefefe;
+            --cream:  rgb(255, 247, 226);
         }
     </style>
 

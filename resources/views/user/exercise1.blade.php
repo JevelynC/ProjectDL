@@ -7,8 +7,22 @@
     }
 
     body {
-        background-color: var(--neutral);
+        /* background: var(--secondary); */
+        min-height: 100vh;
+        min-width: 100vw;
+        padding: 0;
+        margin: 0;
         overflow-x: hidden;
+        background-color: hsla(0, 45%, 87%, 1);
+        background-image:
+            radial-gradient(at 0% 63%, hsla(177, 96%, 78%, 0.74) 0px, transparent 50%),
+            radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 0.39) 0px, transparent 50%),
+            radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.64) 0px, transparent 50%),
+            radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
+            radial-gradient(at 16% 83%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
+            radial-gradient(at 75% 97%, hsla(240, 100%, 70%, 0.74) 0px, transparent 50%),
+            radial-gradient(at 4% 21%, hsla(335, 100%, 76%, 0.77) 0px, transparent 50%);
+        background-size: cover;
     }
 </style>
 
@@ -19,7 +33,7 @@
             <h1 class="font-bold text-4xl text-center pt-10 pb-5 max-sm:w-[280px]">Latihan Soal Modul 1</h1>
 
             @if (session('grade'))
-                <div class="w-full bg-[var(--primary)] bg-opacity-50 h-[50px] rouonded-xl flex justify-center items-center">
+                <div class="w-full bg-[var(--cream)] bg-opacity-50 h-[50px] rouonded-xl flex justify-center items-center">
                     <p class="font-bold text-2xl">Nilai: {{ session('grade') }} / 100</p>
                 </div>
             @endif
@@ -32,7 +46,7 @@
                         $number = 'mulchoice' . ($index + 1);
                     @endphp
                     <div
-                        class="question w-full flex bg-[var(--primary)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col">
+                        class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col">
                         <img src="{{ asset($multipleChoice['img']) }}" class="h-[180px] mx-5 self-center">
                         <div class="px-2 max-sm:px-10">
                             <p class="font-semibold my-3">{{ $multipleChoice['question'] }}</p>
@@ -100,7 +114,7 @@
                         $number = 'letters' . ($index + 1);
                     @endphp
                     <div
-                        class="question w-full flex bg-[var(--primary)] py-3 my-5 rounded-lg overflow-hidden max-sm:flex-col">
+                        class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col">
                         <img src="{{ asset($letter['img']) }}" class="h-[180px] mx-5 self-center">
                         <div>
                             <p class="font-semibold my-3 max-sm:text-center max-sm:px-4">Isi huruf yang kosong pada kata
@@ -130,10 +144,10 @@
                 @endforeach
 
                 @if (!session('grade'))
-                    <button type="submit" class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold"
+                    <button type="submit" class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out"
                         id="submit">Submit</button>
                 @else
-                    <button type="button" class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold" id="closeReview"
+                    <button type="button" class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out" id="closeReview"
                         onclick="window.location.href='{{ route('user.module') }}'">Kembali ke modul</button>
                 @endif
             </div>

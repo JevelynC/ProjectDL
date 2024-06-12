@@ -39,14 +39,14 @@
 </style>
 
 @section('body')
-    <section class="min-h-screen min-w-screen py-10">
+    <section class="min-h-screen min-w-screen py-10  px-5 sm:px-0">
         <div class="w-full flex items-center flex-col">
-            <div class="title-container w-9/12 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]">
+            <div class="title-container w-full sm:w-9/12 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]">
                 <h1 class="text-4xl sm:text-5xl font-extrabold drop-shadow-2xl text-[var(--contrast)] uppercase text-center">
                     Modul 2</h1>
             </div>
 
-            <div class="color-container w-9/12 mt-10 p-5 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
+            <div class="color-container sm:w-9/12 mt-10 p-5 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
                 <h1 class="text-3xl sm:text-4xl font-extrabold drop-shadow-2xl text-[var(--contrast)] text-center">
                     Membaca Jam</h1>
                 <div class="lg:grid grid-cols-2 my-6">
@@ -75,7 +75,7 @@
                 </div>
             </div>
 
-            <div class="color-container w-9/12 mt-10 p-5 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
+            <div class="color-container sm:w-9/12 mt-10 p-5 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
                 <div class="lg:grid grid-cols-2 my-6">
                     <div class="flex flex-col justify-center items-center sm:px-5 sm:py-5">
                         <img src="{{ asset('asset/module/jam/jam1.png') }}" alt="" class="w-full">
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="lg:grid grid-cols-2 w-9/12 gap-4">
+            <div class="lg:grid grid-cols-2 sm:w-9/12 gap-4">
                 <div class="color-container mt-10 p-5 rounded-2xl border-[var(--contrast)] border-[6px]">
                     <div class="flex flex-col justify-center items-center sm:px-5 sm:pb-5">
                         <div class="h-50">
@@ -122,17 +122,17 @@
                 </div>
             </div>
 
-            <div class="color-container w-9/12 mt-10 p-5 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
+            <div class="color-container sm:w-9/12 mt-10 p-5 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
                 <h1 class="text-3xl sm:text-4xl font-extrabold drop-shadow-2xl text-[var(--contrast)] text-center">
                     Sinonim dan Antonim</h1>
                 <div class="lg:grid grid-cols-2 my-6 text-center">
-                    <div class="flex flex-col items-center sm:px-5 sm:pt-5">
-                        <h1 class="text-lg sm:text-2xl font-bold text-[var(--contrast)] lg:px-4 py-2 bg-[var(--neutral)] rounded-2xl">Lawan Kata/Antonim</h1>
+                    <div class="flex flex-col items-center sm:px-5 sm:pt-5 mt-4 sm:mt-0">
+                        <h1 class="text-lg sm:text-2xl font-bold text-[var(--contrast)] px-4 py-2 bg-[var(--neutral)] rounded-2xl">Lawan Kata/Antonim</h1>
                         <h1 class="text-md sm:text-xl font-bold text-[var(--contrast)] lg:px-4 mt-4">Antonim adalah kata yang memiliki makna berlawanan dengan kata lainnya.</h1>
                         <h1 class="text-md sm:text-xl font-bold text-[var(--contrast)] lg:px-4 mt-8">Contoh: antonim dari <b>JUAL</b> adalah <b>BELI</b></h1>
                     </div>
-                    <div class="flex flex-col items-center sm:px-5 sm:pt-5">
-                        <h1 class="text-lg sm:text-2xl font-bold text-[var(--contrast)] lg:px-4 py-2 bg-[var(--neutral)] rounded-2xl">Persamaan Kata/Sinonim</h1>
+                    <div class="flex flex-col items-center sm:px-5 sm:pt-5 mt-8 sm:mt-0">
+                        <h1 class="text-lg sm:text-2xl font-bold text-[var(--contrast)] px-4 py-2 bg-[var(--neutral)] rounded-2xl">Persamaan Kata/Sinonim</h1>
                         <h1 class="text-md sm:text-xl font-bold text-[var(--contrast)] lg:px-4 mt-4">Sinonim adalah kata yang memiliki makna yang sama dengan kata lainnya.</h1>
                         <h1 class="text-md sm:text-xl font-bold text-[var(--contrast)] lg:px-4 mt-8">Contoh: sinonim dari <b>LUAS</b> adalah <b>BESAR</b></h1>
                     </div>

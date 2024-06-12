@@ -37,13 +37,13 @@
 </style>
 
 @section('body')
-    <section class="min-h-screen min-w-screen py-10">
+    <section class="min-h-screen min-w-screen py-10  px-5 sm:px-0">
         <div class="w-full flex items-center flex-col">
-            <div class="title-container w-9/12 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]">
+            <div class="title-container w-full sm:w-9/12 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]">
                 <h1 class="text-4xl sm:text-5xl font-extrabold drop-shadow-2xl text-[var(--contrast)] uppercase text-center">
                     Modul 4</h1>
             </div>
-            <div class="color-container w-9/12 mt-10 p-5 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
+            <div class="color-container sm:w-9/12 mt-10 p-5 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
                 <h1
                     class="text-3xl sm:text-4xl font-extrabold drop-shadow-2xl text-[var(--contrast)] text-center lg:px-4 py-2">
                     Decision Making</h1>
@@ -108,7 +108,7 @@
 
             </div>
 
-            <div class="color-container w-9/12 mt-10 p-5 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
+            <div class="color-container sm:w-9/12 mt-10 p-5 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
                 <h1
                     class="text-3xl sm:text-4xl font-extrabold drop-shadow-2xl text-[var(--contrast)] text-center lg:px-4 py-2">
                     Moral Development</h1>

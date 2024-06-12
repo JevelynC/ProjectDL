@@ -45,7 +45,7 @@
         .cloud:nth-child(6) {
             --cloud-colour: #ffffff;
             --cloud-factor: 1rem;
-            --cloud-opacity: 0.7;
+            --cloud-opacity: 0.6;
             position: absolute;
             top: 40%;
             left: calc(-20 * var(--cloud-factor));
@@ -102,7 +102,7 @@
         }
 
         .cloud:nth-child(4) {
-            --cloud-opacity: 0.9;
+            --cloud-opacity: 0.5;
             top: 5%;
             animation-delay: 25s;
         }
@@ -114,6 +114,7 @@
         }
 
         .cloud:nth-child(6) {
+             --cloud-opacity: 0.5;
             top: 25%;
             animation-delay: 20s;
         }
@@ -179,9 +180,15 @@
             }
         }
 
-        @media (max-width: 767px) {
+        @media (max-width: 1024px) {
             .word {
-                font-size: 47px;
+                font-size: 10vw;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .word {
+                font-size: 12vw;
             }
 
             .cloud {
@@ -274,7 +281,7 @@
                     <div class="shadow"></div>
                 </div>
             </div>
-            <div class="xl:grid grid-rows-2 grid-cols-2 w-9/12 gap-10 pt-10">
+            <div class="xl:grid grid-rows-2 grid-cols-2 w-9/12 gap-10 py-10">
                 @foreach ($modules as $module)
                     <div
                         class="module-container w-full bg-[var(--primary)] flex flex-col justify-center rounded-xl shadow-xl mt-4 xl:mt-0 py-4 sm:py-3">
@@ -288,10 +295,10 @@
                             </div>
                         </div>
                         <div class="w-full flex px-7 py-4">
-                            <a class="w-1/2 mr-3 rounded-lg bg-[var(--neutral)] hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out h-[40px] font-semibold flex justify-center
+                            <a class="w-1/2 mr-3 border-white border-4 rounded-lg bg-[var(--neutral)] hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out h-[40px] font-semibold flex justify-center
                                                 items-center"
                                 href="{{ $module['module'] }}">Modul</a>
-                            <a class="w-1/2 rounded-lg bg-[var(--neutral)] hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out h-[40px] font-semibold flex justify-center
+                            <a class="w-1/2 border-white border-4 rounded-lg bg-[var(--neutral)] hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out h-[40px] font-semibold flex justify-center
                                                 items-center"
                                 href="{{ $module['assessment'] }}">Latihan Soal</a>
                         </div>

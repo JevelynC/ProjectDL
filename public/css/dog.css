@@ -5,17 +5,16 @@
 
 html {
     box-sizing: border-box;
-    font-size: 82.5%;
     background-color: #F4DED3;
 }
 
 @keyframes walk {
     from {
-        transform: translateX(-50%);
+        transform: translateX(-70%);
     }
 
     to {
-        transform: translateX(50%);
+        transform: translateX(70%);
     }
 }
 
