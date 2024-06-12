@@ -37,12 +37,16 @@
         bottom: 20px;
     }
 
-    .cloud {
+    .clouds{
+        height: 70wh;
+    }
+
+    .cloud, .cloud:nth-child(6) {
         --cloud-colour: #ffffff;
         --cloud-factor: 1rem;
-        --cloud-opacity: 0.4;
+        --cloud-opacity: 0.7;
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: calc(-20 * var(--cloud-factor));
         right: auto;
         background-color: var(--cloud-colour);
@@ -75,23 +79,41 @@
         border-radius: 50%;
     }
 
-    .cloud:nth-child(2) {
+    .cloud:nth-child(2), .cloud:nth-child(5){
         --cloud-factor: 0.75rem;
         --cloud-opacity: 0.5;
         top: 20%;
         left: -50%;
         right: auto;
         animation: cloudFloat 39s linear infinite;
+        animation-delay: 5s;
     }
 
-    .cloud:nth-child(3) {
+    .cloud:nth-child(3), .cloud:nth-child(4){
         --cloud-factor: 0.6rem;
         --cloud-opacity: 0.4;
-        top: 75%;
+        top: 55%;
         left: -50%;
         right: auto;
         animation: cloudFloat 34s linear infinite;
     }
+
+    .cloud:nth-child(4){
+        --cloud-opacity: 0.9;
+        top: 5%;
+        animation-delay: 25s;
+    } 
+
+    .cloud:nth-child(5){
+        top: 55%;
+        animation: cloudFloat 45s linear infinite;
+        animation-delay: 15s;
+    } 
+
+    .cloud:nth-child(6){
+        top: 25%;
+        animation-delay: 20s;
+    } 
 
     @keyframes cloudFloat {
         0% {
@@ -154,9 +176,15 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         .word {
             font-size: 47px;
+        }
+        .cloud{
+            top: 50%;
+        }
+        .cloud:nth-child(3) {
+            top: 75%;
         }
     }
 </style>
