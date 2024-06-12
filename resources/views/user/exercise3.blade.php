@@ -41,7 +41,8 @@
     <form action="{{ route('check3') }}" method="POST" class="m-0">
         @csrf
         <section class="min-h-screen w-screen flex flex-col items-center py-10">
-            <div class="title-container  md:w-3/5 max-md:w-4/5 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]">
+            <div class="title-container  md:w-3/5 max-md:w-4/5 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]"
+                data-aos="zoom-in" data-aos-easing="ease-out-cubic">
                 <h1 class="text-3xl sm:text-5xl font-extrabold drop-shadow-2xl text-[var(--contrast)] uppercase text-center">
                     Latihan Soal Modul 3</h1>
             </div>
@@ -58,15 +59,15 @@
                     @php
                         $answer = 'answers' . ($index + 1);
                     @endphp
-                    <div
-                        class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5">
+                    <div class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5"
+                        data-aos="zoom-in" data-aos-easing="ease-out-cubic">
                         <div class="px-2 max-sm:px-10">
                             <p class="font-semibold my-3">{{ $multipleChoice1['question'] }}</p>
                             <div class="mb-3 block min-h-[1.5rem] ps-[1.5rem]">
                                 <input
                                     class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-[var(--contrast)] before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right"
-                                    type="radio" required value="{{ $multipleChoice1['option1'] }}" name="{{ 'answers' . $index }}"
-                                    id="{{ 'optionA' . $index }}" />
+                                    type="radio" required value="{{ $multipleChoice1['option1'] }}"
+                                    name="{{ 'answers' . $index }}" id="{{ 'optionA' . $index }}" />
                                 <label class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
                                     for="{{ 'optionA' . $index }}">
                                     {{ $multipleChoice1['option1'] }}
@@ -75,8 +76,8 @@
                             <div class="mb-3 block min-h-[1.5rem] ps-[1.5rem]">
                                 <input
                                     class="relative float-left -ms-[1.5rem] me-1 mt-0.5 h-5 w-5 appearance-none rounded-full border-2 border-solid border-[var(--contrast)] before:pointer-events-none before:absolute before:h-4 before:w-4 before:scale-0 before:rounded-full before:bg-transparent before:opacity-0 before:shadow-checkbox before:shadow-transparent before:content-[''] after:absolute after:z-[1] after:block after:h-4 after:w-4 after:rounded-full after:content-[''] checked:border-primary checked:before:opacity-[0.16] checked:after:absolute checked:after:left-1/2 checked:after:top-1/2 checked:after:h-[0.625rem] checked:after:w-[0.625rem] checked:after:rounded-full checked:after:border-primary checked:after:bg-primary checked:after:content-[''] checked:after:[transform:translate(-50%,-50%)] hover:cursor-pointer hover:before:opacity-[0.04] hover:before:shadow-black/60 focus:shadow-none focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-black/60 focus:before:transition-[box-shadow_0.2s,transform_0.2s] checked:focus:border-primary checked:focus:before:scale-100 checked:focus:before:shadow-checkbox checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] rtl:float-right"
-                                    type="radio" required value="{{ $multipleChoice1['option2'] }}" name="{{ 'answers' . $index }}"
-                                    id="{{ 'optionB' . $index }}" />
+                                    type="radio" required value="{{ $multipleChoice1['option2'] }}"
+                                    name="{{ 'answers' . $index }}" id="{{ 'optionB' . $index }}" />
                                 <label class="mt-px inline-block ps-[0.15rem] hover:cursor-pointer"
                                     for="{{ 'optionB' . $index }}">
                                     {{ $multipleChoice1['option2'] }}
@@ -109,8 +110,8 @@
                         $index++;
                     @endphp
                 @endforeach
-                <div
-                    class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5">
+                <div class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5"
+                    data-aos="zoom-in" data-aos-easing="ease-out-cubic">
                     <div>
                         <ol class="list-[lower-alpha] font-semibold">Monica selalu menggunakan kaus pelanginya untuk
                             melakukan
@@ -127,7 +128,8 @@
                                 ibunya
                                 untuk dicuci?</li>
                         </ol>
-                        <textarea name="jawaban3" cols="30" rows="5" class="w-full my-3 p-3 bg-[var(--white)] border-4 border-[var(--contrast)] rounded-lg" required></textarea>
+                        <textarea name="jawaban3" cols="30" rows="5"
+                            class="w-full my-3 p-3 bg-[var(--white)] border-4 border-[var(--contrast)] rounded-lg" required></textarea>
                         @if (session('answers7'))
                             <div
                                 class="w-full h-fit p-3 bg-green-500 bg-opacity-50 flex justify-center items-center rounded-lg">
@@ -144,8 +146,8 @@
                     @php
                         $answer = 'answers' . ($index + 1);
                     @endphp
-                    <div
-                        class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5">
+                    <div class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col px-5"
+                        data-aos="zoom-in" data-aos-easing="ease-out-cubic">
                         <div class="px-2 max-sm:px-10">
                             <p class="font-semibold my-3">{{ $tnf['question'] }}</p>
                             <div class="mb-3 block min-h-[1.5rem] ps-[1.5rem]">
@@ -187,11 +189,14 @@
                     @endphp
                 @endforeach
                 @if (!session('grade'))
-                    <button type="submit" class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out"
+                    <button type="submit"
+                        class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out"
                         id="submit">Submit</button>
                 @else
-                    <button type="button" class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out" id="closeReview"
-                        onclick="window.location.href='{{ route('user.module') }}'">Kembali ke modul</button>
+                    <button type="button"
+                        class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out"
+                        id="closeReview" onclick="window.location.href='{{ route('user.module') }}'">Kembali ke
+                        modul</button>
                 @endif
             </div>
         </section>

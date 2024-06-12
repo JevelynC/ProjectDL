@@ -30,7 +30,8 @@
     <form action="{{ route('check1') }}" method="POST" class="m-0">
         @csrf
         <section class="min-h-screen w-screen flex flex-col items-center py-10">
-            <div class="title-container  md:w-3/5 max-md:w-4/5 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]">
+            <div class="title-container  md:w-3/5 max-md:w-4/5 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]"
+                data-aos="zoom-in" data-aos-easing="ease-out-cubic">
                 <h1 class="text-3xl sm:text-5xl font-extrabold drop-shadow-2xl text-[var(--contrast)] uppercase text-center">
                     Latihan Soal Modul 1</h1>
             </div>
@@ -48,8 +49,8 @@
                     @php
                         $number = 'mulchoice' . ($index + 1);
                     @endphp
-                    <div
-                        class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col">
+                    <div class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col"
+                        data-aos="zoom-in" data-aos-easing="ease-out-cubic">
                         <img src="{{ asset($multipleChoice['img']) }}" class="h-[180px] mx-5 self-center">
                         <div class="px-2 max-sm:px-10">
                             <p class="font-semibold my-3">{{ $multipleChoice['question'] }}</p>
@@ -116,8 +117,8 @@
                     @php
                         $number = 'letters' . ($index + 1);
                     @endphp
-                    <div
-                        class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col">
+                    <div class="question w-full flex bg-[var(--cream)] py-3 my-7 rounded-lg overflow-hidden max-sm:flex-col"
+                        data-aos="zoom-in" data-aos-easing="ease-out-cubic">
                         <img src="{{ asset($letter['img']) }}" class="h-[180px] mx-5 self-center">
                         <div>
                             <p class="font-semibold my-3 max-sm:text-center max-sm:px-4">Isi huruf yang kosong pada kata
@@ -147,11 +148,14 @@
                 @endforeach
 
                 @if (!session('grade'))
-                    <button type="submit" class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out"
+                    <button type="submit"
+                        class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out"
                         id="submit">Submit</button>
                 @else
-                    <button type="button" class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out" id="closeReview"
-                        onclick="window.location.href='{{ route('user.module') }}'">Kembali ke modul</button>
+                    <button type="button"
+                        class="w-full h-[50px] bg-[var(--primary)] text-xl font-bold hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out"
+                        id="closeReview" onclick="window.location.href='{{ route('user.module') }}'">Kembali ke
+                        modul</button>
                 @endif
             </div>
         </section>

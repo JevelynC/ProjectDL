@@ -215,7 +215,8 @@
                     <div class="cloud cloud6"></div>
                     <div class="cloud cloud7"></div>
                 </div>
-                <div class="judul">
+                <div class="judul"  data-aos="zoom-in"
+                data-aos-easing="ease-out-cubic">
                     <div class="word">
                         <span class="letter"
                             style="background-image:url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cdefs%2F%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23fcf003%22%20d%3D%22M0%200h256v256H0z%22%2F%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23E6D617%22%20d%3D%22M38.5%2023L49%2044H28zM100.5%2044L111%2065H90zM143%2018l10%2021h-20zM223.5%2034L234%2055h-21zM128.5%2089l10.5%2020h-21zM49%2088l10%2021H39zM100.5%20149l10.5%2021H90zM180.5%2088l10.5%2021h-21zM32.5%20210L43%20231H22zM223.5%20128l10.5%2021h-21zM110.5%20200l10.5%2020h-21zM174.5%20182l10.5%2021h-21zM223.5%20203l10.5%2021h-21zM42%20141l10%2021H32z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E&quot;)">m</span>
@@ -228,7 +229,8 @@
                         <span class="letter"
                             style="background-image:url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cdefs%2F%3E%0A%20%20%20%20%3Cmask%20id%3D%22myMask%22%3E%0A%20%20%20%20%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%22256%22%20height%3D%22256%22%20fill%3D%22white%22%20%2F%3E%0A%20%20%3C%2Fmask%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20mask%3D%22url(%23myMask)%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%2300C34C%22%20d%3D%22M0%200h256v256H0z%22%2F%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23009239%22%20d%3D%22M0%2013.088L50.912%2064%200%20114.912-50.912%2064zM128%2013.088L178.912%2064%20128%20114.912%2077.088%2064zM61%2077.088L111.912%20128%2061%20178.912%2010.088%20128zM192%2077.088L242.912%20128%20192%20178.912%20141.088%20128zM192-50.912L242.912%200%20192%2050.912%20141.088%200zM61-50.912L111.912%200%2061%2050.912%2010.088%200zM61%20205.088L111.912%20256%2061%20306.912%2010.088%20256zM192%20205.088L242.912%20256%20192%20306.912%20141.088%20256zM255%2013.088L305.912%2064%20255%20114.912%20204.088%2064zM1%20141.088L51.912%20192%201%20242.912-49.912%20192zM129%20141.088L179.912%20192%20129%20242.912%2078.088%20192zM256%20141.088L306.912%20192%20256%20242.912%20205.088%20192z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E&quot;)">l</span>
                     </div>
-                    <div class="word">
+                    <div class="word"  data-aos="zoom-in"
+                    data-aos-easing="ease-out-cubic">
                         <span class="letter"
                             style="background-image:url(&quot;data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20256%22%3E%0A%20%20%3Cdefs%2F%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23fcf003%22%20d%3D%22M0%200h256v256H0z%22%2F%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23E6D617%22%20d%3D%22M38.5%2023L49%2044H28zM100.5%2044L111%2065H90zM143%2018l10%2021h-20zM223.5%2034L234%2055h-21zM128.5%2089l10.5%2020h-21zM49%2088l10%2021H39zM100.5%20149l10.5%2021H90zM180.5%2088l10.5%2021h-21zM32.5%20210L43%20231H22zM223.5%20128l10.5%2021h-21zM110.5%20200l10.5%2020h-21zM174.5%20182l10.5%2021h-21zM223.5%20203l10.5%2021h-21zM42%20141l10%2021H32z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E&quot;)">p</span>
                         <span class="letter"
@@ -284,7 +286,8 @@
             <div class="xl:grid grid-rows-2 grid-cols-2 w-9/12 gap-10 py-10">
                 @foreach ($modules as $module)
                     <div
-                        class="module-container w-full bg-[var(--primary)] flex flex-col justify-center rounded-xl shadow-xl mt-4 xl:mt-0 py-4 sm:py-3">
+                        class="module-container w-full bg-[var(--primary)] flex flex-col justify-center rounded-xl shadow-xl mt-4 xl:mt-0 py-4 sm:py-3" data-aos="zoom-in"
+                        data-aos-easing="ease-out-cubic">
                         <div class="flex items-center flex-col sm:flex-row">
                             <div class="xl:pl-7">
                                 <img src="{{ asset($module['image']) }}" class="w-[150px]">
