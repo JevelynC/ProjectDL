@@ -26,7 +26,7 @@
         .title-container {
             overflow-x: hidden;
             position: relative;
-            height: 100vh;
+            height: 100svh;
             width: 100vw;
             background-color: #52ACFF;
             background-image: linear-gradient(180deg, dodgerblue 12%, Khaki 90%, YellowGreen 90%);
