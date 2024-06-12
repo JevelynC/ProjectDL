@@ -57,14 +57,14 @@
 
                 </div>
             </div>
-            <div class="title-container  md:w-3/5 max-md:w-4/5 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]"
+            <div class="title-container md:w-3/5 max-md:w-4/5 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]"
                 data-aos="zoom-in" data-aos-easing="ease-out-cubic">
                 <h1 class="text-3xl sm:text-5xl font-extrabold drop-shadow-2xl text-[var(--contrast)] uppercase text-center">
                     Latihan Soal Modul 3</h1>
             </div>
             @if (session('grade'))
-                <div class="w-full bg-[var(--cream)] bg-opacity-50 h-[50px] rouonded-xl flex justify-center items-center">
-                    <p class="font-bold text-2xl">Nilai: {{ session('grade') }} / 100</p>
+                <div class="md:w-3/5 max-md:w-4/5 py-2 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px] mt-10">
+                    <p class="text-2xl sm:text-4xl font-bold drop-shadow-2xl text-[var(--contrast)] text-center">Nilai: {{ session('grade') }} / 100</p>
                 </div>
             @endif
             <div class="soal-container md:w-3/5 max-md:w-4/5">
