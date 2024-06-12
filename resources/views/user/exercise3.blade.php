@@ -40,8 +40,11 @@
 @section('body')
     <form action="{{ route('check3') }}" method="POST" class="m-0">
         @csrf
-        <section class="min-h-screen w-screen flex flex-col items-center pb-10">
-            <h1 class="font-bold text-4xl text-center  pt-10 pb-5 max-sm:w-[280px]">Latihan Soal Modul 3</h1>
+        <section class="min-h-screen w-screen flex flex-col items-center py-10">
+            <div class="title-container  md:w-3/5 max-md:w-4/5 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]">
+                <h1 class="text-3xl sm:text-5xl font-extrabold drop-shadow-2xl text-[var(--contrast)] uppercase text-center">
+                    Latihan Soal Modul 3</h1>
+            </div>
             @if (session('grade'))
                 <div class="w-full bg-[var(--cream)] bg-opacity-50 h-[50px] rouonded-xl flex justify-center items-center">
                     <p class="font-bold text-2xl">Nilai: {{ session('grade') }} / 100</p>
@@ -124,7 +127,7 @@
                                 ibunya
                                 untuk dicuci?</li>
                         </ol>
-                        <textarea name="jawaban3" cols="30" rows="5" class="w-full my-3 p-3" required></textarea>
+                        <textarea name="jawaban3" cols="30" rows="5" class="w-full my-3 p-3 bg-[var(--white)] border-4 border-[var(--contrast)] rounded-lg" required></textarea>
                         @if (session('answers7'))
                             <div
                                 class="w-full h-fit p-3 bg-green-500 bg-opacity-50 flex justify-center items-center rounded-lg">

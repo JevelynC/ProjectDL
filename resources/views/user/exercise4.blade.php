@@ -45,8 +45,11 @@
     {{-- @dd(session('answers5')) --}}
     <form action="{{ route('check4') }}" method="POST" class="m-0">
         @csrf
-        <section class="min-h-screen w-screen flex flex-col items-center pb-10">
-            <h1 class="font-bold text-4xl text-center  pt-10 pb-5 max-sm:w-[280px]">Latihan Soal Modul 4</h1>
+        <section class="min-h-screen w-screen flex flex-col items-center py-10">
+            <div class="title-container  md:w-3/5 max-md:w-4/5 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]">
+                <h1 class="text-3xl sm:text-5xl font-extrabold drop-shadow-2xl text-[var(--contrast)] uppercase text-center">
+                    Latihan Soal Modul 4</h1>
+            </div>
             <div class="soal-container md:w-3/5 max-md:w-4/5">
                 @php
                     $index = 0;
@@ -58,7 +61,7 @@
                             Kamu berpikir untuk ikut bermain game, toh ujian masih minggu depan. Tapi, kamu juga berpikir
                             untuk menolak ajakan teman-temanmu karena ujian minggu depan sangat susah. Kira-kira pilihan
                             mana yang akan kamu ambil? Belajar atau bermain?</p>
-                        <textarea name="jawaban0" cols="30" rows="5" class="w-full my-3 p-3 bg-[var(--white)]"></textarea>
+                        <textarea name="jawaban0" cols="30" rows="5" class="w-full my-3 p-3 bg-[var(--white)] border-4 border-[var(--contrast)] rounded-lg"></textarea>
                         @if (session('answers1'))
                             <div
                                 class="w-full h-fit p-3 bg-green-500 bg-opacity-40 flex justify-center items-center rounded-lg">
@@ -73,7 +76,7 @@
                         <p>Dalam sebuah kelas terdapat 24 siswa dengan perbandingan jumlah siswa
                             laki-laki dan perempuan adalah 3:5. Berapa jumlah siswa perempuan dan laki-laki dalam kelas
                             tersebut?</p>
-                        <textarea name="jawaban1" cols="30" rows="5" class="w-full my-3 p-3 bg-[var(--white)]"></textarea>
+                        <textarea name="jawaban1" cols="30" rows="5" class="w-full my-3 p-3 bg-[var(--white)] border-4 border-[var(--contrast)] rounded-lg"></textarea>
                         @if (session('answers2'))
                             <div
                                 class="w-full h-fit p-3 bg-green-500 bg-opacity-40 flex justify-center items-center rounded-lg">
@@ -87,7 +90,7 @@
                     <div>
                         <p>Hasil penjumlahan dua bilangan positif adalah 15 dan selisihnya adalah 3. Apa bilangan tersebut?
                         </p>
-                        <textarea name="jawaban2" cols="100" rows="5" class="w-full my-3 p-3 bg-[var(--white)]"></textarea>
+                        <textarea name="jawaban2" cols="100" rows="5" class="w-full my-3 p-3 bg-[var(--white)] border-4 border-[var(--contrast)] rounded-lg"></textarea>
                         @if (session('answers3'))
                             <div class="w-full h-fit p-3 bg-green-500 bg-opacity-40 rounded-lg">
                                 <div class="ans3 !font-semibold">{!! session('answers3') !!}</div>
@@ -104,7 +107,7 @@
                             <li class="ml-5">Apa yang akan membuatmu merasa lebih baik?</li>
                             <li class="ml-5">Apa yang bisa kamu katakan atau lakukan untuk Budi?</li>
                         </ol>
-                        <textarea name="jawaban3" cols="100" rows="5" class="w-full my-3 p-3 bg-[var(--white)]" maxlength="2000"></textarea>
+                        <textarea name="jawaban3" cols="100" rows="5" class="w-full my-3 p-3 bg-[var(--white)] border-4 border-[var(--contrast)] rounded-lg" maxlength="2000"></textarea>
                         @if (session('answers4'))
                             <div
                                 class="w-full h-fit p-3 bg-green-500 bg-opacity-40 flex justify-center items-center rounded-lg">
@@ -128,7 +131,7 @@
                             <li class="ml-5">Apa yang akan membuatmu merasa lebih baik?</li>
                             <li class="ml-5">Apa yang bisa kamu katakan atau lakukan untuk Siti?</li>
                         </ol>
-                        <textarea name="jawaban4" cols="100" rows="5" class="w-full my-3 p-3 bg-[var(--white)]" maxlength="2000"></textarea>
+                        <textarea name="jawaban4" cols="100" rows="5" class="w-full my-3 p-3 bg-[var(--white)] border-4 border-[var(--contrast)] rounded-lg" maxlength="2000"></textarea>
                         @if (session('answers5'))
                             <div
                                 class="w-full h-fit p-3 bg-green-500 bg-opacity-40 flex justify-center items-center rounded-lg">
