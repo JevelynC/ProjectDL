@@ -29,12 +29,7 @@
             height: 100svh;
             width: 100vw;
             background-color: #52ACFF;
-            background-image: linear-gradient(180deg, dodgerblue 12%, Khaki 90%, YellowGreen 90%);
-        }
-
-        .anjing {
-            position: absolute;
-            bottom: 20px;
+            background-image: linear-gradient(180deg, dodgerblue 12%, Khaki 88%, YellowGreen 88%);
         }
 
         .clouds {
@@ -130,7 +125,7 @@
         }
 
         .judul {
-            margin-top: -80px;
+            margin-top: -100px;
         }
 
         .word {
@@ -159,6 +154,12 @@
             background-repeat: repeat;
             min-width: 0.2em;
             z-index: 1;
+        }
+
+        .anjing {
+            position: absolute;
+            scale: 0.8 !important;
+            bottom: 0;
         }
 
         .module-container {
