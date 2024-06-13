@@ -14,15 +14,27 @@
         margin: 0;
         overflow-x: hidden;
         background-color: hsla(0, 45%, 87%, 1);
-        background-image:
+        /* background-image:
             radial-gradient(at 0% 63%, hsla(177, 96%, 78%, 0.74) 0px, transparent 50%),
             radial-gradient(at 40% 20%, hsla(28, 100%, 74%, 0.39) 0px, transparent 50%),
             radial-gradient(at 80% 0%, hsla(189, 100%, 56%, 0.64) 0px, transparent 50%),
             radial-gradient(at 80% 50%, hsla(340, 100%, 76%, 1) 0px, transparent 50%),
             radial-gradient(at 16% 83%, hsla(22, 100%, 77%, 1) 0px, transparent 50%),
             radial-gradient(at 75% 97%, hsla(240, 100%, 70%, 0.74) 0px, transparent 50%),
-            radial-gradient(at 4% 21%, hsla(335, 100%, 76%, 0.77) 0px, transparent 50%);
+            radial-gradient(at 4% 21%, hsla(335, 100%, 76%, 0.77) 0px, transparent 50%); */
         background-size: cover;
+    }
+
+    .cloud:nth-child(2) {
+        top: 25% !important;
+    }
+
+    .cloud:nth-child(4) {
+        top: 70% !important;
+    }
+
+    .cloud:nth-child(5) {
+        top: 140% !important;
     }
 
     .color-container {
@@ -39,147 +51,153 @@
 </style>
 
 @section('body')
-    <section class="min-h-screen min-w-screen py-10 px-5 sm:px-0">
-        <div class="w-full flex items-center flex-col">
-            <div class="w-full sm:w-9/12 mb-10">
-                <a href="{{ route('user.module') }}">
-                    <button type="button"
-                        class="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto hover:bg-gray-100">
-                        <svg class="w-5 h-5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
-                        </svg>
-                        <span>Kembali</span>
-                    </button>
-                </a>
+<section class="min-h-screen min-w-screen py-10 px-5 sm:px-0">
+    <div class="clouds">
+        @for ($i = 1; $i <= 7; $i++)
+            <div class="cloud cloud{{ $i }}"></div>
+        @endfor
+    </div>
 
+    <div class="w-full flex items-center flex-col">
+        <div class="w-full sm:w-9/12 mb-10">
+            <a href="{{ route('user.module') }}">
+                <button type="button"
+                    class="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto hover:bg-gray-100">
+                    <svg class="w-5 h-5 rtl:rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                    </svg>
+                    <span>Kembali</span>
+                </button>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="w-full flex items-center flex-col mb-10">
+        <div
+            class="title-container w-full sm:w-9/12 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]">
+            <h1
+                class="text-4xl sm:text-5xl font-extrabold drop-shadow-2xl text-[var(--contrast)] uppercase text-center">
+                Modul 1</h1>
+        </div>
+
+        <div class="color-container sm:w-9/12 mt-10 py-5 p-2 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
+            <h1 class="text-3xl sm:text-4xl font-extrabold drop-shadow-2xl text-[var(--contrast)] text-center">
+                Mengenal Warna</h1>
+            <div class="grid grid-cols-2 sm:grid-cols-4 grid-rows-2 my-6">
+                <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
+                    <img src="{{ asset('asset/module/warna/red.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#FF3131]">Merah</h1>
+                </div>
+                <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
+                    <img src="{{ asset('asset/module/warna/orange.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#FF914D]">Oranye</h1>
+                </div>
+                <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
+                    <img src="{{ asset('asset/module/warna/yellow.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#FFDE59]">Kuning</h1>
+                </div>
+                <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
+                    <img src="{{ asset('asset/module/warna/green.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#7ED957]">Hijau</h1>
+                </div>
+                <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
+                    <img src="{{ asset('asset/module/warna/blue.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#5271FF]">Biru</h1>
+                </div>
+                <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
+                    <img src="{{ asset('asset/module/warna/purple.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#C76CED]">Ungu</h1>
+                </div>
+                <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
+                    <img src="{{ asset('asset/module/warna/white.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-xl sm:text-2xl font-bold text-slate-400 px-4 py-2 bg-white">Putih</h1>
+                </div>
+                <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
+                    <img src="{{ asset('asset/module/warna/black.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-black">Hitam</h1>
+                </div>
             </div>
         </div>
 
-        <div class="w-full flex items-center flex-col">
-            <div
-                class="title-container w-full sm:w-9/12 py-10 bg-[var(--neutral)] rounded-2xl border-[var(--white)] border-[6px]">
-                <h1
-                    class="text-4xl sm:text-5xl font-extrabold drop-shadow-2xl text-[var(--contrast)] uppercase text-center">
-                    Modul 1</h1>
-            </div>
-
-            <div class="color-container sm:w-9/12 mt-10 py-5 p-2 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
-                <h1 class="text-3xl sm:text-4xl font-extrabold drop-shadow-2xl text-[var(--contrast)] text-center">
-                    Mengenal Warna</h1>
-                <div class="grid grid-cols-2 sm:grid-cols-4 grid-rows-2 my-6">
-                    <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
-                        <img src="{{ asset('asset/module/warna/red.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#FF3131]">Merah</h1>
-                    </div>
-                    <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
-                        <img src="{{ asset('asset/module/warna/orange.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#FF914D]">Oranye</h1>
-                    </div>
-                    <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
-                        <img src="{{ asset('asset/module/warna/yellow.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#FFDE59]">Kuning</h1>
-                    </div>
-                    <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
-                        <img src="{{ asset('asset/module/warna/green.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#7ED957]">Hijau</h1>
-                    </div>
-                    <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
-                        <img src="{{ asset('asset/module/warna/blue.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#5271FF]">Biru</h1>
-                    </div>
-                    <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
-                        <img src="{{ asset('asset/module/warna/purple.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-[#C76CED]">Ungu</h1>
-                    </div>
-                    <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
-                        <img src="{{ asset('asset/module/warna/white.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-xl sm:text-2xl font-bold text-slate-400 px-4 py-2 bg-white">Putih</h1>
-                    </div>
-                    <div class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4">
-                        <img src="{{ asset('asset/module/warna/black.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-xl sm:text-2xl font-bold text-white px-4 py-2 bg-black">Hitam</h1>
-                    </div>
+        <div
+            class="number-container sm:w-9/12 mt-10 py-5 p-2 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
+            <h1 class="text-3xl sm:text-4xl font-extrabold drop-shadow-2xl text-[var(--contrast)] text-center">
+                Mengenal Angka</h1>
+            <div class="grid grid-cols-2 sm:grid-cols-5 grid-rows-2 my-6 gap-4">
+                <div
+                    class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
+                    <img src="{{ asset('asset/module/angka/1.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-5xl font-extrabold mt-4">1</h1>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
+                    <img src="{{ asset('asset/module/angka/2.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-5xl font-extrabold mt-4">2</h1>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
+                    <img src="{{ asset('asset/module/angka/3.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-5xl font-extrabold mt-4">3</h1>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
+                    <img src="{{ asset('asset/module/angka/4.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-5xl font-extrabold mt-4">4</h1>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
+                    <img src="{{ asset('asset/module/angka/5.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-5xl font-extrabold mt-4">5</h1>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
+                    <img src="{{ asset('asset/module/angka/6.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-5xl font-extrabold mt-4">6</h1>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
+                    <img src="{{ asset('asset/module/angka/7.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-5xl font-extrabold mt-4">7</h1>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
+                    <img src="{{ asset('asset/module/angka/8.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-5xl font-extrabold mt-4">8</h1>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
+                    <img src="{{ asset('asset/module/angka/9.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-5xl font-extrabold mt-4">9</h1>
+                </div>
+                <div
+                    class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
+                    <img src="{{ asset('asset/module/angka/10.png') }}" alt=""
+                        class="hover:scale-105 transition-all duration-300 ease-in-out">
+                    <h1 class="text-5xl font-extrabold mt-4">10</h1>
                 </div>
             </div>
 
-            <div
-                class="number-container sm:w-9/12 mt-10 py-5 p-2 sm:p-10 rounded-2xl border-[var(--contrast)] border-[6px]">
-                <h1 class="text-3xl sm:text-4xl font-extrabold drop-shadow-2xl text-[var(--contrast)] text-center">
-                    Mengenal Angka</h1>
-                <div class="grid grid-cols-2 sm:grid-cols-5 grid-rows-2 my-6 gap-4">
-                    <div
-                        class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
-                        <img src="{{ asset('asset/module/angka/1.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-5xl font-extrabold mt-4">1</h1>
-                    </div>
-                    <div
-                        class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
-                        <img src="{{ asset('asset/module/angka/2.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-5xl font-extrabold mt-4">2</h1>
-                    </div>
-                    <div
-                        class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
-                        <img src="{{ asset('asset/module/angka/3.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-5xl font-extrabold mt-4">3</h1>
-                    </div>
-                    <div
-                        class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
-                        <img src="{{ asset('asset/module/angka/4.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-5xl font-extrabold mt-4">4</h1>
-                    </div>
-                    <div
-                        class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
-                        <img src="{{ asset('asset/module/angka/5.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-5xl font-extrabold mt-4">5</h1>
-                    </div>
-                    <div
-                        class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
-                        <img src="{{ asset('asset/module/angka/6.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-5xl font-extrabold mt-4">6</h1>
-                    </div>
-                    <div
-                        class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
-                        <img src="{{ asset('asset/module/angka/7.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-5xl font-extrabold mt-4">7</h1>
-                    </div>
-                    <div
-                        class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
-                        <img src="{{ asset('asset/module/angka/8.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-5xl font-extrabold mt-4">8</h1>
-                    </div>
-                    <div
-                        class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
-                        <img src="{{ asset('asset/module/angka/9.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-5xl font-extrabold mt-4">9</h1>
-                    </div>
-                    <div
-                        class="flex flex-col justify-center items-center px-1 sm:px-5 py-5 mt-4 bg-white border-4 border-[var(--contrast)]">
-                        <img src="{{ asset('asset/module/angka/10.png') }}" alt=""
-                            class="hover:scale-105 transition-all duration-300 ease-in-out">
-                        <h1 class="text-5xl font-extrabold mt-4">10</h1>
-                    </div>
-                </div>
-
-            </div>
         </div>
-    </section>
+    </div>
+</section>
 @endsection
