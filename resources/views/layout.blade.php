@@ -62,14 +62,15 @@
             --primary: #E2D2FE;
             --secondary: #BAE5F4;
             --neutral: #FCCDCD;
+            --pink: #ffe0e0;
             --contrast: rgba(0, 0, 90);
             --white: #fefefe;
             --cream: rgb(255, 247, 226);
         }
 
         body {
-            background-image: linear-gradient(180deg, dodgerblue 12%, Khaki 90%, YellowGreen 90%);
-            overflow-x: hidden z-index: 10;
+            background-image: linear-gradient(180deg, #89CBE2 12%, #D7E2F1 90%, #72cc93 90%);
+            overflow-x: hidden 
         }
 
         .clouds {

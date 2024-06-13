@@ -20,7 +20,7 @@
                 radial-gradient(at 75% 97%, hsla(240, 100%, 70%, 0.74) 0px, transparent 50%),
                 radial-gradient(at 4% 21%, hsla(335, 100%, 76%, 0.77) 0px, transparent 50%); */
         background-size: cover;
-        background: YellowGreen;
+        background: #72cc93;
     }
 
     .title-container {
@@ -29,7 +29,7 @@
         height: 100svh;
         width: 100vw;
         background-color: #52ACFF;
-        background-image: linear-gradient(180deg, dodgerblue 12%, Khaki 88%, YellowGreen 88%);
+        background-image: linear-gradient(180deg, #89CBE2 12%, #D7E2F1 90%, #72cc93 90%);
     }
 
     .clouds {
@@ -101,7 +101,7 @@
     .anjing {
         position: absolute;
         scale: 0.8 !important;
-        bottom: 0;
+        bottom: -10px;
     }
 
     .module-container {
@@ -213,7 +213,7 @@
 
         <div class="xl:grid grid-rows-2 grid-cols-2 w-9/12 gap-10 py-10">
             @foreach ($modules as $module)
-                <div class="module-container w-full bg-[var(--primary)] flex flex-col justify-center rounded-xl shadow-xl mt-4 xl:mt-0 py-4 sm:py-3"
+                <div class="module-container w-full bg-white flex flex-col justify-center rounded-3xl shadow-xl mt-4 xl:mt-0 py-4 sm:py-3"
                     data-aos="zoom-in" data-aos-easing="ease-out-cubic">
                     <div class="flex items-center flex-col sm:flex-row">
                         <div class="xl:pl-7">
@@ -225,9 +225,9 @@
                         </div>
                     </div>
                     <div class="w-full flex px-7 py-4">
-                        <a class="w-1/2 mr-3 border-white border-4 rounded-lg bg-[var(--neutral)] hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out h-[40px] font-semibold flex justify-center
+                        <a class="w-1/2 mr-3  rounded-lg bg-[var(--pink)] hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out h-[40px] font-semibold flex justify-center
                                                                     items-center" href="{{ $module['module'] }}">Modul</a>
-                        <a class="w-1/2 border-white border-4 rounded-lg bg-[var(--neutral)] hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out h-[40px] font-semibold flex justify-center
+                        <a class="w-1/2  rounded-lg bg-[var(--pink)] hover:bg-[var(--secondary)] transition-all duration-300 ease-in-out h-[40px] font-semibold flex justify-center
                                                                     items-center"
                             href="{{ $module['assessment'] }}">Latihan
                             Soal</a>
